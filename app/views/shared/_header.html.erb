@@ -1,0 +1,13 @@
+<div class="header">
+  <h1><a href="/">ShowMe</a></h1>
+  <div class="login-status-bar">
+    <% if current_user %>
+      <span>You are currently logged in.</span>
+      <%= button_to "Log out", destroy_user_session_path, method: :destroy %>
+    <% else %>
+      <span>You are currently not logged in.</span>
+      <%= link_to "Log in", new_user_session_path %>
+      <%= link_to "Create account", new_user_registration_path %>
+    <% end %>
+  </div>
+</div>
