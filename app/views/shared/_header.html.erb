@@ -12,4 +12,17 @@
       <%= link_to "Create account", new_user_registration_path %>
     <% end %>
   </div>
+  <% if @errors %>
+    <div class="errors">
+      errors:
+      <ul>
+        <% @errors.each do |error| %>
+          <li>
+            <%= error %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
 </div>
