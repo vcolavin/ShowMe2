@@ -1,1 +1,24 @@
-<p><%= @welcome %></p>
+<p>
+  <%= "hello" %>
+  <% if current_user %>
+    <%=  current_user.email %>
+
+    <%= form_for @artist do |f| %>
+      <%= f.text_field :name,  placeholder: "ke$ha"%>
+      <%= f.submit "add this artist" %>
+    <% end %>
+
+    <% unless current_user.artists.empty? %>
+      <p>Here are your artists:</p>
+      <ul>
+        <% current_user.artists.each do |artist| %>
+          <li>
+            <%= artist.name %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>You are not following any artists.</p>
+    <% end %>
+  <% end %>
+</p>

@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @welcome = "welcome!"
+    @artist = Artist.new
   end
 end
