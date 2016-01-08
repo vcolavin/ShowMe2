@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :artists, only: [:create]
 
-  resources :welcome, only: [:index]
+  resources :home, only: [:index]
 
-  root 'welcome#index'
+  root 'home#index'
 end

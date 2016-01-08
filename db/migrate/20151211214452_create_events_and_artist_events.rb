@@ -23,6 +23,8 @@ class CreateEventsAndArtistEvents < ActiveRecord::Migration
     create_table :artist_events do |t|
       t.integer :artist_id
       t.integer :event_id
+
+      t.timestamps
     end
   end
 end

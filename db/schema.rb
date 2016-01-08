@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 20160101013737) do
   enable_extension "tablefunc"
 
   create_table "artist_events", force: :cascade do |t|
-    t.integer "artist_id"
-    t.integer "event_id"
+    t.integer  "artist_id"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "artists", force: :cascade do |t|
@@ -31,8 +33,10 @@ ActiveRecord::Schema.define(version: 20160101013737) do
   end
 
   create_table "artists_users", force: :cascade do |t|
-    t.integer "artist_id"
-    t.integer "user_id"
+    t.integer  "artist_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "events", force: :cascade do |t|

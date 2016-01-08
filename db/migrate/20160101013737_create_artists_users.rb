@@ -3,6 +3,8 @@ class CreateArtistsUsers < ActiveRecord::Migration
     create_table :artists_users do |t|
       t.integer :artist_id
       t.integer :user_id
+
+      t.timestamps
     end
   end
 end

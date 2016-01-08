@@ -3,5 +3,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  has_and_belongs_to_many :artists
+  has_many :artists_users
+  has_many :artists, through: :artists_users
 end
